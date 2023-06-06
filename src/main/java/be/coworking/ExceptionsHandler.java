@@ -6,8 +6,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
-import exceptions.NotFoundException;
-import exceptions.ErrorsPayload;
+
+import be.coworking.exceptions.ErrorsPayload;
+import be.coworking.exceptions.NotFoundException;
 
 public class ExceptionsHandler extends ResponseEntityExceptionHandler {
 
