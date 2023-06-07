@@ -1,6 +1,8 @@
 package be.coworking.services;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.ArrayList;
 
 import lombok.Data;
@@ -22,5 +24,13 @@ public class PrenotazioneService {
 					new Utente("Mario", "Rossi"), 
 					new Postazione(1, "coworking", Tipo.OPENSPACE, 10, new Edificio(1, "Blocco A", "Via Maj", "Milano")))
 			));
+
+	private Map<String, String> infoPrenotazioniMsg = Map.of(
+            "it", "Queste sono le regole per le prenotazioni per le nostre postazioni:",
+            "en", "Here are the booking rules for our spaces:"
+    );
+    public Optional<String>  getInfoMSg(String lang){
+        return Optional.ofNullable(infoPrenotazioniMsg.get(lang));
+    }
 
 }
